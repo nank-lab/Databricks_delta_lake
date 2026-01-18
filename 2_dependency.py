@@ -23,7 +23,7 @@ return df
 @dlt.table(
 name="aggregated_orders"
 )
-# def aggregated_orders():
-#     df = dlt.read_stream("transformed_orders")
-#     df = df.groupBy("order_status").count()
-#     return df
+def aggregated_orders():
+df = dlt.read_stream("transformed_orders")
+df = df.groupBy("order_status").count()
+return df
